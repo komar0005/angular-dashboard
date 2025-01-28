@@ -1,0 +1,14 @@
+<div class="flex align-items-center gap-3">
+  <p-avatar
+    [image]="user.avatarUrl"
+    shape="circle"
+    size="xlarge"
+    alt="avatar"
+  />
+  <div class="flex flex-column">
+    <p class="font-bold text-lg m-0 text-gray-900">
+      {{ user.fullName }}
+    </p>
+    <p class="font-medium m-0 text-lg text-gray-900">{{ user.workPlace }}</p>
+  </div>
+</div>

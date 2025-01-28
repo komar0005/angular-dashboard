@@ -1,0 +1,13 @@
+<div class="flex flex-column h-screen w-full">
+  <app-navbar class="flex-none"></app-navbar>
+  <div class="flex-grow-1 overflow-hidden">
+    <div class="grid h-full">
+      <div class="col-3 h-full">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-9 overflow-y-auto h-full">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

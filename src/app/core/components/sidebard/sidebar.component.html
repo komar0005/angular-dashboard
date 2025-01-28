@@ -1,0 +1,30 @@
+<div class="sidebar surface-100 px-3 py-6 border-round flex flex-column h-full">
+  <form [formGroup]="sidebarForm" class="p-fluid flex flex-column gap-2">
+    <div class="field">
+      <label for="center" class="text-900 font-semibold"
+        >Centro de desarrollo</label
+      >
+      <p-autoComplete
+        id="center"
+        formControlName="autocomplete"
+        [suggestions]="autocompleteOptions"
+        (completeMethod)="filterAutocomplete($event)"
+        [dropdown]="true"
+        placeholder="Seleccione una opción"
+      ></p-autoComplete>
+    </div>
+
+    <div class="field">
+      <label for="center" class="text-900 font-semibold"
+        >Plantilla del personal</label
+      >
+      <p-dropdown
+        formControlName="dropdown"
+        [options]="dropdownOptions"
+        optionLabel="name"
+        optionValue="value"
+        placeholder="Elija una opción"
+      ></p-dropdown>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,71 @@
+<div class="flex flex-column gap-4 shadow-1 border-round py-4 px-2">
+  <app-avatar-info [user]="user" class="ml-4"></app-avatar-info>
+
+  <div class="flex justify-content-between align-items-center">
+    <div class="flex gap-4">
+      <div class="field">
+        <label for="start-date" class="block mb-2 font-semibold text-gray-900"
+          >Fecha de inicio</label
+        >
+        <p-calendar
+          [showIcon]="true"
+          inputId="start-date"
+          id="start-date"
+          placeholder="MM/DD/YYYY"
+        ></p-calendar>
+      </div>
+      <div class="field">
+        <label for="end-date" class="block mb-2 font-semibold text-gray-900"
+          >Fecha de fin</label
+        >
+        <p-calendar
+          [showIcon]="true"
+          inputId="end-date"
+          id="end-date"
+          placeholder="MM/DD/YYYY"
+        ></p-calendar>
+      </div>
+    </div>
+
+    <div class="flex gap-2">
+      <button
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-print"
+        class="p-button-rounded p-button-secondary p-button-text"
+        size="large"
+      ></button>
+      <button
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-file-excel"
+        class="p-button-rounded p-button-success p-button-text"
+        size="large"
+      ></button>
+      <button
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-file-pdf"
+        size="large"
+        class="p-button-rounded p-button-danger p-button-text"
+      ></button>
+    </div>
+  </div>
+  <app-project-table />
+
+  <div class="flex justify-content-end gap-4">
+    <div class="flex flex-column align-items-end gap-4">
+      <span class="p-float-label">
+        <input id="float-input" type="text" pInputText class="w-26rem" />
+        <label for="float-input">Usuario</label>
+      </span>
+      <button pButton pRipple class="flex gap-2 align-items-center">
+        <i class="pi pi-plus"></i>Firma
+      </button>
+    </div>
+    <div class="w-12rem h-7rem shadow-1"></div>
+  </div>
+</div>
